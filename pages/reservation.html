@@ -1,0 +1,36 @@
+        <!-- Section de réservation -->
+        <section class="container py-5">
+            <h2 class="text-center mb-4">Réservez votre covoiturage</h2>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="departure-location" class="form-label">Lieu de départ</label>
+                        <input type="text" class="form-control" id="departure-location" placeholder="Entrez le lieu de départ" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="arrival-location" class="form-label">Lieu d'arrivée</label>
+                        <input type="text" class="form-control" id="arrival-location" placeholder="Entrez le lieu d'arrivée" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="departure-date" class="form-label">Date de départ</label>
+                        <input type="date" class="form-control" id="departure-date" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="num-passengers" class="form-label">Nombre de passagers</label>
+                        <select class="form-select" id="num-passengers" required>
+                            <option value="1">1 passager</option>
+                            <option value="2">2 passagers</option>
+                            <option value="3">3 passagers</option>
+                            <option value="4">4 passagers</option>
+                            <option value="5">5 passagers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Réserver</button>
+                </div>
+            </form>
+        </section>
