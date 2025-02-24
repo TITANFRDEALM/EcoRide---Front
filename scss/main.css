@@ -11844,4 +11844,32 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.header {
+  background-color: #A7C4BC;
+  color: white;
+  padding: 15px;
+}
+.header .navbar {
+  font-family: "Montserrat", sans-serif;
+}
+.header .navbar-brand {
+  font-family: "hind Madurai", serif;
+  font-size: 1.8rem;
+  color: white;
+}
+.header .navbar-brand:hover {
+  color: #8FBC8F;
+}
+.header .nav-link {
+  color: white !important;
+}
+.header .nav-link:hover {
+  color: #8FBC8F !important;
+}
+.header .navbar-toggler-icon {
+  background-color: white;
+}
+.header .navbar-nav {
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
