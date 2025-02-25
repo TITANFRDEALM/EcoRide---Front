@@ -1,0 +1,142 @@
+<div class="container d-flex justify-content-center align-items-start min-vh-100">
+    <div class="row justify-content-center w-100">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title text-center mb-4">Mon compte ECORIDE</h4>
+            
+            <!-- Photo de Profil -->
+            <div class="profile-section">
+              <img src="https://via.placeholder.com/120" alt="Photo de Profil" class="profile-image" id="profileImage">
+              <br>
+              <button class="btn btn-secondary" onclick="openModal()">Modifier ma photo</button>
+            </div>
+
+            <!-- Onglets de navigation -->
+            <ul class="nav nav-tabs" id="accountTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="connexionTab" data-toggle="tab" href="#connexion" role="tab" aria-controls="connexion" aria-selected="true">Informations de connexion</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="voitureTab" data-toggle="tab" href="#voiture" role="tab" aria-controls="voiture" aria-selected="false">Enregistrer une voiture</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="covTab" data-toggle="tab" href="#cov" role="tab" aria-controls="cov" aria-selected="false">Créer une offre de covoiturage</a>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="accountTabsContent">
+              <!-- Informations de connexion -->
+              <div class="tab-pane fade show active" id="connexion" role="tabpanel" aria-labelledby="connexionTab">
+                <form action="#" method="POST">
+                  <h5>Modifier mes informations de connexion</h5>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Adresse e-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" value="exemple@email.com" readonly>
+                  </div>
+                  <div class="mb-3">
+                    <label for="motdepasse" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="motdepasse" name="motdepasse" required placeholder="Entrez votre mot de passe">
+                  </div>
+                  <div class="mb-3">
+                    <label for="verifmotdepasse" class="form-label">Vérification du mot de passe</label>
+                    <input type="password" class="form-control" id="verifmotdepasse" name="verifmotdepasse" required placeholder="Confirmez votre mot de passe">
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Mettre à jour</button>
+                </form>
+              </div>
+
+              <!-- Enregistrer une voiture -->
+              <div class="tab-pane fade" id="voiture" role="tabpanel" aria-labelledby="voitureTab">
+                <form action="#" method="POST">
+                  <h5>Enregistrer une voiture</h5>
+                  <div class="mb-3">
+                    <label for="marqueVehicule" class="form-label">Marque du véhicule</label>
+                    <input type="text" class="form-control" id="marqueVehicule" name="marqueVehicule" placeholder="Entrez la marque de votre véhicule">
+                  </div>
+                  <div class="mb-3">
+                    <label for="energieVehicule" class="form-label">Énergie du véhicule</label>
+                    <select class="form-control" id="energieVehicule" name="energieVehicule">
+                      <option value="electrique">Électrique</option>
+                      <option value="hybride">Hybride</option>
+                      <option value="essence">Essence</option>
+                      <option value="diesel">Diesel</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="couleurVehicule" class="form-label">Couleur du véhicule</label>
+                    <input type="text" class="form-control" id="couleurVehicule" name="couleurVehicule" placeholder="Entrez la couleur de votre véhicule">
+                  </div>
+                  <div class="mb-3">
+                    <label for="placesVehicule" class="form-label">Nombre de places</label>
+                    <input type="number" class="form-control" id="placesVehicule" name="placesVehicule" placeholder="Nombre de places disponibles" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enregistrer le véhicule</button>
+                </form>
+              </div>
+
+              <!-- Créer une offre de covoiturage -->
+              <div class="tab-pane fade" id="cov" role="tabpanel" aria-labelledby="covTab">
+                <form action="#" method="POST">
+                  <h5>Créer une offre de covoiturage</h5>
+                  <div class="mb-3">
+                    <label for="lieuDepart" class="form-label">Lieu de départ</label>
+                    <input type="text" class="form-control" id="lieuDepart" name="lieuDepart" placeholder="Entrez le lieu de départ" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="lieuArrivee" class="form-label">Lieu d'arrivée</label>
+                    <input type="text" class="form-control" id="lieuArrivee" name="lieuArrivee" placeholder="Entrez le lieu d'arrivée" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="vehiculeCovoiturage" class="form-label">Sélectionnez votre véhicule</label>
+                    <select class="form-control" id="vehiculeCovoiturage" name="vehiculeCovoiturage" required>
+                      <option value="1">Véhicule 1 - Électrique, 4 places</option>
+                      <option value="2">Véhicule 2 - Hybride, 5 places</option>
+                      <option value="3">Véhicule 3 - Essence, 4 places</option>
+                      <option value="4">Véhicule 4 - Diesel, 5 places</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="placesDisponibles" class="form-label">Nombre de places disponibles</label>
+                    <input type="number" class="form-control" id="placesDisponibles" name="placesDisponibles" placeholder="Nombre de places disponibles" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="dateDepart" class="form-label">Date et heure de départ</label>
+                    <input type="datetime-local" class="form-control" id="dateDepart" name="dateDepart" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="prix" class="form-label">Prix (par passager)</label>
+                    <input type="number" class="form-control" id="prix" name="prix" placeholder="Entrez le prix par passager" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Publier l'offre de covoiturage</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal pour modifier la photo de profil -->
+  <div class="modal fade" id="modalPhoto" tabindex="-1" role="dialog" aria-labelledby="modalPhotoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPhotoLabel">Modifier la photo de profil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="photoProfile">Choisir une nouvelle photo</label>
+              <input type="file" class="form-control-file" id="photoProfile" accept="image/*">
+            </div>
+            <button type="button" class="btn btn-primary">Enregistrer la photo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
