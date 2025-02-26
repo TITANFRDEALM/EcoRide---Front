@@ -79,14 +79,23 @@
         </div>
     </footer>    
     <script src="js/auth/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- jQuery (nécessaire pour Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Utilisation de la version minifiée sans 'slim' car ça pourrait causer des soucis avec certains composants Bootstrap -->
+    
+    <!-- Bootstrap JS (version 4) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> <!-- bootstrap.bundle.min.js inclut Popper.js -->
+    
+    <!-- Router JS (si tu utilises un module JS pour ton router) -->
     <script type="module" src="./router/router.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    // Affichage du modal pour changer la photo de profil
-    function openModal() {
-      $('#modalPhoto').modal('show');
-    }
-  </script>
-</body>
-</html>
+    
+    <!-- Suppression de la ligne du double import de bootstrap.bundle.min.js -->
+    
+    <script>
+      // Fonction d'affichage du modal pour changer la photo de profil
+      function openModal() {
+        $('#modalPhoto').modal('show'); // Affiche le modal avec jQuery
+      }
+    </script>
+    </body>
+    </html>    

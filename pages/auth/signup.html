@@ -4,7 +4,7 @@
         <div class="card shadow-sm">
           <div class="card-body">
             <h4 class="card-title text-center mb-4">Créer un compte ECORIDE</h4>
-            <form action="#" method="POST">
+            <form id="formulaireInscription" action="#" method="POST">
               <!-- Nom -->
               <div class="mb-3">
                 <label for="nom" class="form-label">Nom</label>
@@ -32,7 +32,7 @@
               <!-- Email -->
               <div class="mb-3">
                 <label for="email" class="form-label">Adresse e-mail</label>
-                <input type="email" class="form-control" id="email" name="email" required placeholder="Entrez votre e-mail">
+                <input type="email" class="form-control" id="email" name="mail" required placeholder="Entrez votre e-mail">
               <div class="invalid-feedback">
                 Mail au mauvais format
               </div>
@@ -58,7 +58,7 @@
             </div>
               <!-- Soumettre le formulaire -->
               <div class="text-center">
-                <button type="submit" class="btn btn-primary w-100" id="btn-validation-inscription">S'inscrire</button>
+                <button type="button" class="btn btn-primary w-100" id="btn-validation-inscription">S'inscrire</button>
               </div>
             </form>
             <div class="text-center mt-3">
